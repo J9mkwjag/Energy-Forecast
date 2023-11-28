@@ -13,14 +13,14 @@ from datetime import datetime
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, LSTM
 from tensorflow.keras.preprocessing.sequence import TimeseriesGenerator
-from tensorflow.data.Dataset
+# from tensorflow.data import Dataset
 
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error as mae
 from sklearn.metrics import mean_absolute_percentage_error as mape
 
-from prophet import Prophet
+# from prophet import Prophet
 
 import matplotlib
 import matplotlib.pyplot as plt
@@ -29,11 +29,11 @@ import matplotlib.pyplot as plt
 
 
 # Load in data
-energy = pd.read_csv('OneDrive\Desktop\IAA Material\Fall\Time Series II\Data\hrl_load_metered.csv', index_col=[0], parse_dates=[0])
-energy_t1 = pd.read_csv('OneDrive\Desktop\IAA Material\Fall\Time Series II\Data\hrl_load_metered - test1.csv', index_col=[0], parse_dates=[0])
-energy_t2 = pd.read_csv('OneDrive\Desktop\IAA Material\Fall\Time Series II\Data\hrl_load_metered - test2.csv', index_col=[0], parse_dates=[0])
-energy_t3 = pd.read_csv('OneDrive\Desktop\IAA Material\Fall\Time Series II\Data\hrl_load_metered - test3.csv', index_col=[1], parse_dates=[1])
-energy_t4 = pd.read_csv('OneDrive\Desktop\IAA Material\Fall\Time Series II\Data\hrl_load_metered - test4.csv', index_col=[0], parse_dates=[0])
+energy = pd.read_csv('..\data\hrl_load_metered.csv', index_col=[0], parse_dates=[0])
+energy_t1 = pd.read_csv('..\data\hrl_load_metered - test1.csv', index_col=[0], parse_dates=[0])
+energy_t2 = pd.read_csv('..\data\hrl_load_metered - test2.csv', index_col=[0], parse_dates=[0])
+energy_t3 = pd.read_csv('..\data\hrl_load_metered - test3.csv', index_col=[1], parse_dates=[1])
+energy_t4 = pd.read_csv('..\data\hrl_load_metered - test4.csv', index_col=[0], parse_dates=[0])
 
 energy_t3 = energy_t3.drop(['datetime_beginning_utc'], axis = 1)
 
